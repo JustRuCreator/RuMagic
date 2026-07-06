@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MeteorSpellVariant : MonoBehaviour, ISpellVariant
 {
-    public void Cast()
+    public void Cast(Vector2 position)
     {
-       
+        Debug.Log("Meteor casted");
     }
 
   

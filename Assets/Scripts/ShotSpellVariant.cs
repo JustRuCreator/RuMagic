@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ShotSpellVariant : MonoBehaviour, ISpellVariant
 {
-    public void Cast()
+    public void Cast(Vector2 position)
     {
-        
+        Debug.Log("Shot casted");
     }
 
    

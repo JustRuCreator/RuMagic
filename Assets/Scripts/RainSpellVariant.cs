@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class RainSpellVariant : MonoBehaviour, ISpellVariant
 {
-    public void Cast()
+    public void Cast(Vector2 position)
     {
-       
+        Debug.Log("Rain casted");
+
     }
 
    

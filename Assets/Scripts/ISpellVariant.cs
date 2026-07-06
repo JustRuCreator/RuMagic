@@ -1,4 +1,6 @@
+using UnityEngine;
+
 public interface ISpellVariant
 {
-    public void Cast();
+    public void Cast(Vector2 position);
 }

@@ -17,9 +17,10 @@ public class Spell : MonoBehaviour
         
     }
     
-    public void Initialize(ISpellVariant spellVariant, IElement element)
+    public void Initialize(ISpellVariant spellVariant, IElement element, Vector2 position)
     {
         _spellVariant = spellVariant;
         _element = element;
+        _spellVariant.Cast(position);
     }
 }
