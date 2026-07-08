@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeteorSpellVariant : MonoBehaviour, ISpellVariant
+public class MeteorSpellVariant : SpellVariant
 {
-    public void Cast(Vector2 position)
+    public override void Cast(Vector2 position)
     {
         Debug.Log("Meteor casted");
     }

@@ -1,7 +1,6 @@
 using UnityEngine;
 
-public class ElementWater : MonoBehaviour, IElement
+public class ElementWater : Element
 {
-    [SerializeField] private DamageType _damageType;
-    public DamageType DamageType => _damageType;
+    
 }

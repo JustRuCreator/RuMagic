@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShotSpellVariant : MonoBehaviour, ISpellVariant
+public class ShotSpellVariant : SpellVariant
 {
-    public void Cast(Vector2 position)
+    public override void Cast(Vector2 position)
     {
         Debug.Log("Shot casted");
+        //Instantiate(spellPrefab, position, Quaternion.identity);
     }
 
-   
     void Start()
     {
         

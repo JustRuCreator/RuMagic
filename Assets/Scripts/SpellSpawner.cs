@@ -3,32 +3,27 @@ using UnityEngine;
 
 public class SpellSpawner : MonoBehaviour
 {
+    [SerializeField] private Camera _camera;
     [SerializeField] private string _input;
 
-    private List<IElement> _allElements = new List<IElement>();
-    private List<ISpellVariant> _allSpells = new List<ISpellVariant>();
+    [SerializeField] private List<Element> _allElements = new List<Element>();
+    [SerializeField] private List<SpellVariant> _allSpells = new List<SpellVariant>();
 
     private void Awake()
     {
-        IElement element = new GameObject().AddComponent<ElementFire>();
+        Element element = new GameObject().AddComponent<ElementFire>();
         _allElements.Add(element);
         element = new GameObject().AddComponent<ElementWater>();
         _allElements.Add(element);
         element = new GameObject().AddComponent<ElementEarth>();
         _allElements.Add(element);
-        ISpellVariant spellVariant = new GameObject().AddComponent<MeteorSpellVariant>();
-        _allSpells.Add(spellVariant);
-        spellVariant = new GameObject().AddComponent<RainSpellVariant>();
-        _allSpells.Add(spellVariant);
-        spellVariant = new GameObject().AddComponent<ShotSpellVariant>();
-        _allSpells.Add(spellVariant);
     }
     public void SpawnSpell()
     {
         Spell spell = new GameObject("New Spell").AddComponent<Spell>();
         int index = _input.IndexOf(' ');
-        IElement element = null;
-        ISpellVariant spellVariant = null;
+        Element element = null;
+        SpellVariant spellVariant = null;
         if (index == -1)
             return;
 
@@ -50,7 +45,10 @@ public class SpellSpawner : MonoBehaviour
                 spellVariant = _allSpells[i];
             }
         }
-        spell.Initialize(spellVariant, element, Vector3.zero);
+
+        Vector3 worldMousePos = _camera.ScreenToWorldPoint(Input.mousePosition);
+        spell.Initialize(spellVariant, element, worldMousePos);
+        Invoke("SpawnSpell", 10f);
 
 
     }

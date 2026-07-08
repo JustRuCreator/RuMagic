@@ -1,7 +1,6 @@
 using UnityEngine;
 
-public class ElementEarth : MonoBehaviour, IElement
+public class ElementEarth : Element
 {
-    [SerializeField] private DamageType _damageType;
-    public DamageType DamageType => _damageType;
+    
 }

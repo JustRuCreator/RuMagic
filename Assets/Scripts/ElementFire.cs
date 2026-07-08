@@ -1,7 +1,6 @@
 using UnityEngine;
 
-public class ElementFire : MonoBehaviour, IElement
+public class ElementFire : Element
 {
-    [SerializeField] private DamageType _damageType;
-    public DamageType DamageType => _damageType;
+    
 }
