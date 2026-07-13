@@ -10,7 +10,7 @@ public class EnemyHealth : MonoBehaviour
     }
 
     
-    public void GetDamage(int damage)
+    public void GetDamage(float damage)
     {
         _hp -= damage;
 

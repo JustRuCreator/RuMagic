@@ -7,6 +7,7 @@ public class MeteorSpellVariant : SpellVariant
     public override void Cast(Vector2 position)
     {
         Debug.Log("Meteor casted");
+        Instantiate(spellPrefab, position, Quaternion.identity);
     }
 
   

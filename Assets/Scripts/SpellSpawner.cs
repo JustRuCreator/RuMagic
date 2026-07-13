@@ -48,18 +48,21 @@ public class SpellSpawner : MonoBehaviour
 
         Vector3 worldMousePos = _camera.ScreenToWorldPoint(Input.mousePosition);
         spell.Initialize(spellVariant, element, worldMousePos);
-        Invoke("SpawnSpell", 10f);
+        
 
 
     }
     void Start()
     {
-        SpawnSpell();
+       
     }
 
 
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            SpawnSpell();
+        }
     }
 }
