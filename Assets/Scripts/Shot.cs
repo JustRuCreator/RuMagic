@@ -11,12 +11,7 @@ public class Shot : MonoBehaviour
 
     private Rigidbody2D _rb;
 
-    private void Update()
-    {
-        
-    }
-
-    private void Start()
+    private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
     }

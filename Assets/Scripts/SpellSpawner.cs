@@ -11,13 +11,9 @@ public class SpellSpawner : MonoBehaviour
 
     private void Awake()
     {
-        Element element = new GameObject().AddComponent<ElementFire>();
-        _allElements.Add(element);
-        element = new GameObject().AddComponent<ElementWater>();
-        _allElements.Add(element);
-        element = new GameObject().AddComponent<ElementEarth>();
-        _allElements.Add(element);
+        
     }
+
     public void SpawnSpell()
     {
         Spell spell = new GameObject("New Spell").AddComponent<Spell>();
@@ -48,16 +44,7 @@ public class SpellSpawner : MonoBehaviour
 
         Vector3 worldMousePos = _camera.ScreenToWorldPoint(Input.mousePosition);
         spell.Initialize(spellVariant, element, worldMousePos);
-        
-
-
     }
-    void Start()
-    {
-       
-    }
-
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))

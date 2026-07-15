@@ -45,3 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spellPrefab: {fileID: 1141111925874248394, guid: af68b74ffe3e699488e2a7fbb60ddf49, type: 3}
+  <SpellType>k__BackingField: 1

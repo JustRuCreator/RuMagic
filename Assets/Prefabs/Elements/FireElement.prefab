@@ -45,3 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <DamageType>k__BackingField: 0
+  <Visuals>k__BackingField:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 6294508013172393186, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}

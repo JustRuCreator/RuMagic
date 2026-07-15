@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class ShotSpellVariant : SpellVariant
 {   
-    public override void Cast(Vector2 position)
+    public override GameObject Cast(Vector2 position)
     {
-       
         Debug.Log("Shot casted");
 
         GameObject spell = Instantiate(spellPrefab, transform.position, Quaternion.identity);
@@ -15,16 +14,7 @@ public class ShotSpellVariant : SpellVariant
         {
             shot.Move(position);
         }
-    }
 
-    void Start()
-    {
-        
-    }
-
-  
-    void Update()
-    {
-        
+        return spell;
     }
 }
